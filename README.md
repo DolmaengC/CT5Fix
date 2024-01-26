@@ -1,5 +1,3 @@
-# SPI_2.0
+# CT5Fix
 
-- 김성빈
-- 장세창
-- 최준혁
+- CoditT5 + ConFix
