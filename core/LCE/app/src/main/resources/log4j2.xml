@@ -1,0 +1,51 @@
+<Configuration status="info">
+	<Properties>
+		<Property name="projectRoot">/home/newwin0189/SPI</Property>
+	</Properties>
+
+	<Appenders>
+		<RollingFile append="true" fileName="${projectRoot}/logs/lce.log" filePattern="${projectRoot}/logs/lce-%d{yyMMdd}.log" name="fileLogger">
+			<PatternLayout>
+				<pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%l-%M] %c{1} - %msg%n
+				</pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true" />
+				<SizeBasedTriggeringPolicy size="10MB" />
+				
+			</Policies>
+			
+			<DefaultRolloverStrategy max="10">
+				<Delete basePath="${projectRoot}" maxDepth="10">
+					
+					<IfLastModified age="30d" />
+				</Delete>
+			</DefaultRolloverStrategy>
+		</RollingFile>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout>
+                <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%l-%M] %c{1} - %msg%n
+                </pattern>
+            </PatternLayout>
+        </Console>
+		<RollingFile fileName="${projectRoot}/logs/error_lce.log" filePattern="${projectRoot}/logs/error_lce-%d{yyMMdd}.log" name="errorLogger">
+			<PatternLayout>
+				<pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%l-%M] %c{1} - %msg%n
+				</pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true" />
+				<SizeBasedTriggeringPolicy size="10MB" />
+			</Policies>
+		</RollingFile>
+	</Appenders>
+	<Loggers>
+		<Root additivity="false" level="trace">
+			<appender-ref ref="fileLogger" />
+            <appender-ref ref="console" />
+		</Root>
+		<Logger additivity="false" level="warn" name="org.apache">
+			<appender-ref ref="errorLogger" />
+		</Logger>
+	</Loggers>
+</Configuration>

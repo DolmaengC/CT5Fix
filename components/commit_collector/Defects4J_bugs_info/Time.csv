@@ -1,0 +1,7 @@
+Defects4J ID,Faulty file path,fix faulty line,blame faulty line
+4,src/main/java/org/joda/time/Partial.java,464,464
+15,src/main/java/org/joda/time/field/FieldUtils.java,137,137
+16,src/main/java/org/joda/time/format/DateTimeFormatter.java,709,709
+19,src/main/java/org/joda/time/DateTimeZone.java,900,900
+24,src/main/java/org/joda/time/format/DateTimeParserBucket.java,354,354
+25,src/main/java/org/joda/time/DateTimeZone.java,898,898

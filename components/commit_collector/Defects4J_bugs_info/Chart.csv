@@ -1,0 +1,13 @@
+Defects4J ID,Faulty file path,fix faulty line,blame faulty line
+1,source/org/jfree/chart/renderer/category/AbstractCategoryItemRenderer.java,1797,1797
+3,source/org/jfree/data/time/TimeSeries.java,1056,1056
+8,source/org/jfree/data/time/Week.java,175,175
+9,source/org/jfree/data/time/TimeSeries.java,944,944
+10,source/org/jfree/chart/imagemap/StandardToolTipTagFragmentGenerator.java,65,65
+11,source/org/jfree/chart/util/ShapeUtilities.java,275,275
+12,source/org/jfree/chart/plot/MultiplePiePlot.java,145,145
+13,source/org/jfree/chart/block/BorderArrangement.java,455,455
+17,source/org/jfree/data/time/TimeSeries.java,857,857
+20,source/org/jfree/chart/plot/ValueMarker.java,95,95
+23,source/org/jfree/chart/renderer/category/MinMaxCategoryRenderer.java,434,434
+24,source/org/jfree/chart/renderer/GrayPaintScale.java,126,126
